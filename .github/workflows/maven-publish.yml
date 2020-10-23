@@ -30,7 +30,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ github.token }}
 
-    - name: Build release
-      run: mvn -B clean build -Dregistry=https://maven.pkg.github.com/phillip2019 -Dtoken=${{ github.token }}
+    - name: Build release Package
+      run: mvn -B clean build -Dregistry=https://maven.pkg.github.com/phillip2019
       env:
         GITHUB_TOKEN: ${{ github.token }}
