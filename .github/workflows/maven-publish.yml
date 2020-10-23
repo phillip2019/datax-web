@@ -31,6 +31,6 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
 
     - name: Build release
-      run: mvn -B clean build -s $GITHUB_WORKSPACE/settings.xml
+      run: mvn -B clean build -Dregistry=https://maven.pkg.github.com/phillip2019 -Dtoken=${{ github.token }}
       env:
         GITHUB_TOKEN: ${{ github.token }}
